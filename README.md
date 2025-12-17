@@ -1,4 +1,4 @@
-# R36S console clone authopsy
+# R36S console clone autopsy
 
 GA36-MB V1.0-20250730
 
