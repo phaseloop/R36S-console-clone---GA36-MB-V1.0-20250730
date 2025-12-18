@@ -8,7 +8,7 @@ This console is next level fake because chip markings say: `RK3326 NACLH04028 25
 
 Console runs custom build of EmuElec 4.7 modified for A33 CPU and apparently booting from Android kernel/ramdisk image for A33, so it's not like even public EmuElec build will work (I tried).
 
-Partition schema is weird because that was the thing back them with ancient uboot. I think similar partition schema target was/is used with Bananapi BPI-M2M also running on Allwinner A33.
+Partition schema is weird because that was the thing back them with ancient uboot. I think similar partition schema target was/is used with Bananapi BPI-M2M also running on Allwinner A33.ount -t udf filename.img ~/img_mnt -o loop
 
 TL;DR - Image and backup whole SD card because there is no current way to reflash it with any image or release that will work. Once your original SD card is gone - device is trash.
 
@@ -96,10 +96,12 @@ fastboot_key_value_max=0x8
 fastboot_key_value_min=0x2
 ```
 
-### Kernel
+### Bootimg
 
 What I initially thought is kernel, is Android bootimg - packed kernel and other files (ramdisk)? Still working on unpacking it.
 Repository contains `kernel.zip` file which is raw partition dump (bootimg).
+
+Extracted ramdisk seems to be created by LibreELEC.
 
 Beginning of bootimg:
 
@@ -151,9 +153,8 @@ share/bootloader/overlays/sun8i-h3-tve.dtbo
 ### EmuElec build
 
 Apparently vendor took EmuElec and dependencies (CoreElec/LibreElec) and added custom build target (I suppose H3 target will be compatible).
-Building A33 kernel was a different story. Kernel compilation date is modern and one of partitions has "ANDROID" string somewhere so maybe it was some A33 Android for Bananapi build with additional partitions and EmuElec initrd image uploaded on top of it.
 
-Fastboot and recovery key entries in uboot also suggest this is a repurposed Android build of some kind. Maybe it's also the reason why vendor took the easiest route with old kernel instead of porting something to newer one (which theoretically should work).
+It seems LibreELEC target was some kind of Android device - resulting with Android bootimg, partitions, ramdisk, etc. 
 
 Screenshot of os-release taken by @lcdyk0517 - discussion: https://github.com/lcdyk0517/arkos4clone/issues/147
 
