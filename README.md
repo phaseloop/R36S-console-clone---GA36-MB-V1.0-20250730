@@ -30,7 +30,9 @@ Files extracted from console. Partition schema is unusual as bootloader config a
 
 ## Autopsy
 
-# Partition schema
+### Partition schema
+
+TDB
 
 ### Uboot config
 
