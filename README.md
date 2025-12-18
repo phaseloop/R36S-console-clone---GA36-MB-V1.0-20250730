@@ -120,6 +120,8 @@ share/bootloader/overlays/sun8i-h3-tve.dtbo
 Apparently vendor took EmuElec and dependencies (CoreElec/LibreElec) and added custom build target (I suppose H3 target will be compatible).
 Building A33 kernel was a different story. Kernel compilation date is modern and one of partitions has "ANDROID" string somewhere so maybe it was some A33 Android for Bananapi build with additional partitions and EmuElec initrd image uploaded on top of it.
 
+Fastboot and recovery key entries in uboot also suggest this is a repurposed Android build of some kind. Maybe it's also the reason why vendor took the easies route with old kernel instead of portin something to newer one (which theoretically should work).
+
 Screenshot of os-release taken by @lcdyk0517 - discussion: https://github.com/lcdyk0517/arkos4clone/issues/147
 
 <img width="2614" height="1000" alt="527472066-9028aee8-2d6c-4c40-9a1d-cafe06be1eb0" src="https://github.com/user-attachments/assets/50947a49-33aa-4650-bb4a-23ff55e75725" />
