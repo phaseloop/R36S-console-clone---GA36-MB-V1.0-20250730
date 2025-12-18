@@ -6,7 +6,7 @@ GA36-MB V1.0-20250730
 
 This console is next level fake because chip markings say: `RK3326 NACLH04028 2520 P43D126` but inside is much older and shittier Allwinner A33. Yes, I could not believe it myself for a while. EmuElec boot logs show detection of Mali400 GPU which sadly is a proof.
 
-Console runs custom build of EmuElec 4.7 modified for A33 CPU so it's not like even public EmuElec build will work (I tried).
+Console runs custom build of EmuElec 4.7 modified for A33 CPU and apparently booting from Android kernel/ramdisk image for A33, so it's not like even public EmuElec build will work (I tried).
 
 Partition schema is weird because that was the thing back them with ancient uboot. I think similar partition schema target was/is used with Bananapi BPI-M2M also running on Allwinner A33.
 
@@ -28,7 +28,7 @@ Apparently this file can be converted back to human readable from and DTB can be
 
 https://www.cnx-software.com/2012/05/06/editing-allwinner-a10-board-configuration-files-script-bin/
 
-`magin.bin` file from device attached to repo.
+`magin.bin` initially included in this repo is not the one. I'm still working on extracting that from bootimg.
 
 ## Autopsy
 
@@ -61,7 +61,7 @@ Partition 3 - not real partition, extended partition entry for 5, 6, 7 and 8
 
 Partition 5 - uboot config partition (raw, no filesystem)
 
-Partition 6 - kernel image (raw, no filesystem)
+Partition 6 - Android bootimg - kernel + ramdisk image
 
 Partition 7 - EMUELEC partition with SYSTEM image (squashfs with EmuElec - original EmuElec uses same file)
 
@@ -98,9 +98,10 @@ fastboot_key_value_min=0x2
 
 ### Kernel
 
-Kernel image is stored as separate partition too - block number is passed in uboot config.
+What I initially thought is kernel, is Android bootimg - packed kernel and other files (ramdisk)? Still working on unpacking it.
+Repository contains `kernel.zip` file which is raw partition dump (bootimg).
 
-Beginning of kernel image:
+Beginning of bootimg:
 
 ```
 sun8i
