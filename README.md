@@ -54,11 +54,17 @@ r36s-emuelec.img8      1810432   4956159  3145728  1.5G 83 Linux
 ```
 
 Partition 1 - roms and savestate files
+
 Partition 2 - magic.bin file, boot logo, battery state images and some font files
+
 Partition 3 - not real partition, extended partition entry for 5, 6, 7 and 8
+
 Partition 5 - uboot config partition (raw, no filesystem)
+
 Partition 6 - kernel image (raw, no filesystem)
+
 Partition 7 - EMUELEC partition with SYSTEM image (squashfs with EmuElec - original EmuElec uses same file)
+
 Partition 8 - some kind of r/w filesystem or overlay. Stores logs, swap file, emulation cores, hostname file (host name is UDT). It seems this is where console stores its config.
 
 
@@ -146,7 +152,7 @@ share/bootloader/overlays/sun8i-h3-tve.dtbo
 Apparently vendor took EmuElec and dependencies (CoreElec/LibreElec) and added custom build target (I suppose H3 target will be compatible).
 Building A33 kernel was a different story. Kernel compilation date is modern and one of partitions has "ANDROID" string somewhere so maybe it was some A33 Android for Bananapi build with additional partitions and EmuElec initrd image uploaded on top of it.
 
-Fastboot and recovery key entries in uboot also suggest this is a repurposed Android build of some kind. Maybe it's also the reason why vendor took the easies route with old kernel instead of portin something to newer one (which theoretically should work).
+Fastboot and recovery key entries in uboot also suggest this is a repurposed Android build of some kind. Maybe it's also the reason why vendor took the easiest route with old kernel instead of porting something to newer one (which theoretically should work).
 
 Screenshot of os-release taken by @lcdyk0517 - discussion: https://github.com/lcdyk0517/arkos4clone/issues/147
 
