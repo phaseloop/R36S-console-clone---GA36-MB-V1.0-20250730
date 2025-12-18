@@ -8,7 +8,9 @@ This console is next level fake because chip markings say: `RK3326 NACLH04028 25
 
 Console runs custom build of EmuElec 4.7 modified for A33 CPU so it's not like even public EmuElec build will work (I tried).
 
-Partition schema is weird because that was the thing back them with ancient uboot. I similar partition schema target was/is used with Bananapi BPI-M2M also running on Allwinner A33.
+Partition schema is weird because that was the thing back them with ancient uboot. I thuink similar partition schema target was/is used with Bananapi BPI-M2M also running on Allwinner A33.
+
+TL;DR - Image and backup whole SD card because there is no current way to reflash it with any image or release that will work. Once your original SD card is gone - device is trash.
 
 ## Sunxi-kernel
 
