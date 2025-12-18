@@ -28,13 +28,39 @@ Apparently this file can be converted back to human readable from and DTB can be
 
 https://www.cnx-software.com/2012/05/06/editing-allwinner-a10-board-configuration-files-script-bin/
 
-Files extracted from console. Partition schema is unusual as bootloader config and kernel seem to be written raw to partitions without filesystem.
+`magin.bin` file from device attached to repo.
 
 ## Autopsy
 
 ### Partition schema
 
-TDB
+```
+Disk r36s-emuelec.img: 50.05 GiB, 53739520000 bytes, 104960000 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x815d9b77
+
+Device            Boot   Start       End  Sectors  Size Id Type
+r36s-emuelec.img1      4956160 104855550 99899391 47.6G  b W95 FAT32
+r36s-emuelec.img2 *      73728    139263    65536   32M  6 FAT16
+r36s-emuelec.img3            1   4956160  4956160  2.4G 85 Linux extended
+r36s-emuelec.img5       139264    172031    32768   16M 83 Linux
+r36s-emuelec.img6       172032    237567    65536   32M 83 Linux
+r36s-emuelec.img7       237568   1810431  1572864  768M 83 Linux
+r36s-emuelec.img8      1810432   4956159  3145728  1.5G 83 Linux
+
+```
+
+Partition 1 - roms and savestate files
+Partition 2 - magic.bin file, boot logo, battery state images and some font files
+Partition 3 - not real partition, extended partition entry for 5, 6, 7 and 8
+Partition 5 - uboot config partition (raw, no filesystem)
+Partition 6 - kernel image (raw, no filesystem)
+Partition 7 - EMUELEC partition with SYSTEM image (squashfs with EmuElec - original EmuElec uses same file)
+Partition 8 - some kind of r/w filesystem or overlay. Stores logs, swap file, emulation cores, hostname file (host name is UDT). It seems this is where console stores its config.
+
 
 ### Uboot config
 
