@@ -30,6 +30,15 @@ https://www.cnx-software.com/2012/05/06/editing-allwinner-a10-board-configuratio
 
 `magin.bin` initially included in this repo is not the one. I'm still working on extracting that from bootimg.
 
+## Light in the tunnel
+
+Nintendo NES Classic seem to be based on same hardware (R16 is renamed A33) but with on-chip NAND while this R36S uses SD-Card which is actually better - so much of existing research on building and running Linux on it may be
+used here.
+
+https://linux-sunxi.org/Nintendo_NES_Classic_Edition
+
+
+
 ## Autopsy
 
 ### Partition schema
