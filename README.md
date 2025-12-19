@@ -45,6 +45,10 @@ https://www.reddit.com/r/nintendo/comments/5cgbkm/linux_on_nes_classic_mini_curr
 
 ### Partition schema
 
+Parition schema seems to match old Android ones:
+
+https://linux-sunxi.org/Android/partitions
+
 ```
 Disk r36s-emuelec.img: 50.05 GiB, 53739520000 bytes, 104960000 sectors
 Units: sectors of 1 * 512 = 512 bytes
