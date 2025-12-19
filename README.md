@@ -37,6 +37,8 @@ used here.
 
 https://linux-sunxi.org/Nintendo_NES_Classic_Edition
 
+https://www.reddit.com/r/nintendo/comments/5cgbkm/linux_on_nes_classic_mini_current_progress_and/
+
 
 
 ## Autopsy
