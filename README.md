@@ -30,6 +30,10 @@ https://www.cnx-software.com/2012/05/06/editing-allwinner-a10-board-configuratio
 
 `magin.bin` initially included in this repo is not the one. I'm still working on extracting that from bootimg.
 
+Alternatively - mayyybe any of existing a33/r16 DTB files may work (assuming you boot 32 bit build and not aarch64)
+
+https://dl-cdn.alpinelinux.org/alpine/latest-stable/releases/armv7/netboot/dtbs-lts/
+
 ## Light in the tunnel
 
 Nintendo NES Classic seem to be based on same hardware (R16 is renamed A33) but with on-chip NAND while this R36S uses SD-Card which is actually better - so much of existing research on building and running Linux on it may be
