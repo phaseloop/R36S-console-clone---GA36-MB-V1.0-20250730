@@ -11,7 +11,7 @@ FAT partition is only 5 or so MB in size. On device boot it will resize it to ma
 
 File: r36-a33-recovery-img.zip
 
-Download from Mediafire](https://www.mediafire.com/file/6ynv87a26icrehx/r36-a33-recovery-img.zip/file)
+[Download from Mediafire](https://www.mediafire.com/file/6ynv87a26icrehx/r36-a33-recovery-img.zip/file)
 
 ## Anatomy of a fake
 
