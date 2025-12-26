@@ -2,12 +2,16 @@
 
 GA36-MB V1.0-20250730
 
+# Recovery image
+
 IMPORTANT! In this repo I prepared and included recovery image for this console. If you damaged/lost your card just flash this image as any other R36 image *using Rufus for example). There are no ROMS in this image so it's up to you to download them on the card. 
+
 
 FAT partition is only 5 or so MB in size. On device boot it will resize it to match SD card and copy some basic/free NES games. Then insert to your PC and copy your ROMS.
 
 File: r36-a33-recovery-img.zip
-[Download from Mediafire](https://www.mediafire.com/file/6ynv87a26icrehx/r36-a33-recovery-img.zip/file)
+
+Download from Mediafire](https://www.mediafire.com/file/6ynv87a26icrehx/r36-a33-recovery-img.zip/file)
 
 ## Anatomy of a fake
 
